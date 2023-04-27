@@ -7,6 +7,7 @@ import IMG4 from '../../assets/portfolio4.jpg'
 import IMG5 from '../../assets/portfolio5.jpg'
 import IMG6 from '../../assets/portfolio6.jpg'
 import IMG7 from '../../assets/portfolio7.png'
+import IMG8 from '../../assets/portfolio8.webp'
 
 import {  Pagination } from 'swiper';
 
@@ -25,14 +26,12 @@ const data = [
     image:IMG7,
     title:'USERS REGISTER WITH CRUD FUNCTIONS',
     github: 'https://github.com/Jarbram/reactjs-go-mongo-crud',
-    demo: 'https://github.com/Jarbram/reactjs-go-mongo-crud/'
   },
   {
     id:1,
     image:IMG2,
     title:'Landing Page Marea',
     github: 'https://github.com/Jarbram/MareaBartenders',
-    demo: 'https://jarbram.github.io/MareaBartenders/'
   },
   {
     id:2,
@@ -54,14 +53,12 @@ const data = [
     image:IMG4,
     title:'E-commerce design for a bakery',
     github: 'https://github.com/Jarbram/e-commerce-react',
-    demo: 'https://github.com/Jarbram/e-commerce-react'
   },
   {
     id:5,
     image:IMG5,
     title:'bookmark-api-fiber',
     github: 'https://github.com/Jarbram/bookmark-api-fiber',
-    demo: 'https://github.com/Jarbram/bookmark-api-fiber'
   },
   {
     id:6,
@@ -70,6 +67,12 @@ const data = [
     github: 'https://github.com/Jarbram/Calculadora2.0',
     demo: 'https://jarbram.github.io/Calculadora2.0/'
   },
+  {
+    id:7,
+    image:IMG8,
+    title:'Calorie Tracker',
+    github: 'https://github.com/Jarbram/go-tracker-calories'
+  }
 ]
 
 const Portfolio = () => {
@@ -98,7 +101,7 @@ return (
 
 <div className="portfolio__item-cta">
 <a href={github} className='btn' target="_blank">GitHub</a>
-<a href={demo} className="btn btn-primary" target="_blank">Live Demo</a>
+{demo && <a href={demo} className="btn btn-primary" target="_blank">Live Demo</a>}
 </div>
 
 </SwiperSlide>)
